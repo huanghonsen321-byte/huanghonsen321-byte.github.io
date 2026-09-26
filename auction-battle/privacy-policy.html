@@ -22,16 +22,16 @@
 <p class="meta">App: Auction Battle (package com.huanghonsen.auctionbattle) · Effective date: 27 September 2026</p>
 
 <h2>Summary</h2>
-<p>Auction Battle does not sell or share personal data and does not keep any personal data on a server. Single-player campaigns work fully offline. The optional Online Match mode connects to our game server only while you use it.</p>
+<p>Auction Battle uses the online match data described below to provide multiplayer gameplay. We do not sell this data. Your nickname and match activity are shared with other participants in your room. Single-player campaigns work fully offline. The optional Online Match mode connects to our game server only while you use it.</p>
 
 <h2>Online Match (optional)</h2>
 <p>When you open Online Match, the app connects over the internet to our game server (Tencent Cloud). To run the match it sends:</p>
 <ul>
   <li>the nickname you enter (by default a random name such as "Lord123"; do not use your real name);</li>
-  <li>a random reconnect code created on your device, so you can return to your seat after a dropped connection. It is not linked to your identity, your Google account or any device identifier;</li>
+  <li>a random reconnect code issued by our game server and saved on your device, so you can return to your seat after a dropped connection. It is not linked to your identity, your Google account or any device identifier;</li>
   <li>your in-game actions (soul choice, bids, wagers, ready taps).</li>
 </ul>
-<p>Like any internet connection, the server necessarily sees your IP address while you are connected. The game server does not write IP addresses, nicknames or reconnect codes to its logs; its logs contain only room codes, times and aggregate counts, and old log files are deleted after 14 days. Match state is held in memory only while the room is open and is discarded at the latest 10 minutes after the match ends. The cloud provider may keep standard network records under its own policies.</p>
+<p>Like any internet connection, the server necessarily sees your IP address while you are connected. The game server does not write IP addresses, nicknames or reconnect codes to its logs; its logs contain only room codes, times and aggregate counts, and rotated game logs older than 14 days are cleaned up when the server runner starts a game-server process. Current and watchdog logs are not covered by that cleanup. Match state is held in memory only while the room is open and is discarded at the latest 10 minutes after the match ends. The cloud provider may keep standard network records under its own policies.</p>
 
 <h2>What the app does not do</h2>
 <ul>
@@ -40,11 +40,12 @@
   <li>Apart from the Online Match data described above, it does not send any information about you or your device off your device.</li>
 </ul>
 
+<p>Reconnect session mappings are held in server memory and can remain after a room closes, until the server process restarts. The current multiplayer connection uses unencrypted WebSocket transport; do not send sensitive information as your nickname.</p>
 <h2>Data kept on your device</h2>
 <p>Your campaign progress and settings (language, volume, graphics, font size, online nickname and reconnect code) are saved only in the app's private storage on your device. Campaign progress is never uploaded, and the app opts out of Android cloud backup. Uninstalling the app or clearing its data deletes them.</p>
 
 <h2>Children</h2>
-<p>The app is not directed at children under 13 and does not knowingly collect information from anyone, including children.</p>
+<p>The app is not directed at children under 13. If you believe a child has provided personal information through the game, contact us using the channel below.</p>
 
 <h2>Changes</h2>
 <p>If a future version starts to collect or share any data, this policy will be updated before that version is released and the effective date above will change.</p>
@@ -58,16 +59,16 @@
 <p class="meta" lang="zh-CN">应用：拍卖大作战（包名 com.huanghonsen.auctionbattle）· 生效日期：2026 年 9 月 27 日</p>
 <div lang="zh-CN">
 <h2>摘要</h2>
-<p>拍卖大作战不出售、不共享个人数据，也不在服务器上保存任何个人数据。单机征程可完全离线运行；可选的“联机对战”只在你使用时连接我们的游戏服务器。</p>
+<p>拍卖大作战使用下述联机数据提供多人对战，不出售这些数据。同一房间的其他玩家会收到你的昵称及相关对局信息。单机征程可完全离线运行；可选的“联机对战”只在你使用时连接我们的游戏服务器。</p>
 
 <h2>联机对战（可选）</h2>
 <p>打开“联机对战”时，应用会通过互联网连接我们的游戏服务器（腾讯云）。为进行对局，会发送：</p>
 <ul>
   <li>你输入的昵称（默认是“领主123”这类随机名字，请勿使用真实姓名）；</li>
-  <li>在你设备上随机生成的重连码，用于断线后回到原座位；它不关联你的身份、Google 账号或任何设备标识；</li>
+  <li>服务器随机生成并保存在你设备上的重连码，用于断线后回到原座位；它不关联你的身份、Google 账号或任何设备标识；</li>
   <li>你在游戏中的操作（选择灵魂、出价、下注、准备）。</li>
 </ul>
-<p>与所有网络连接一样，连接期间服务器必然会看到你的 IP 地址。游戏服务器不会把 IP 地址、昵称或重连码写入日志；日志只包含房间号、时间和汇总统计，旧日志文件 14 天后删除。对局状态只在房间开放期间保存在内存中，最迟在对局结束 10 分钟后丢弃。云服务商可能依其自身政策保留标准的网络记录。</p>
+<p>与所有网络连接一样，连接期间服务器必然会看到你的 IP 地址。游戏服务器不会把 IP 地址、昵称或重连码写入日志；日志只包含房间号、时间和汇总统计，服务器运行脚本在启动游戏服务进程时清理超过 14 天的轮换游戏日志；当前日志和看门狗日志不在此清理范围内。对局状态只在房间开放期间保存在内存中，最迟在对局结束 10 分钟后丢弃。云服务商可能依其自身政策保留标准的网络记录。</p>
 
 <h2>本应用不会做的事</h2>
 <ul>
@@ -76,11 +77,12 @@
   <li>除上述联机对战数据外，不会把任何关于你或你设备的信息发送到设备之外。</li>
 </ul>
 
+<p>重连会话映射保存在服务器内存中，房间关闭后仍可能保留，直到服务器进程重启。当前联机连接使用未加密的 WebSocket 传输，请勿把敏感信息用作昵称。</p>
 <h2>保存在你设备上的数据</h2>
 <p>征程进度与设置（语言、音量、画质、字号、联机昵称与重连码）只保存在本应用于你设备上的私有存储中。征程进度从不上传，并且本应用关闭了 Android 云备份。卸载应用或清除应用数据即会删除这些数据。</p>
 
 <h2>儿童</h2>
-<p>本应用不面向 13 岁以下儿童，也不会有意收集任何人（包括儿童）的信息。</p>
+<p>本应用不面向 13 岁以下儿童。如果你认为儿童通过游戏提供了个人信息，请通过下方渠道联系我们。</p>
 
 <h2>变更</h2>
 <p>如果未来的版本开始收集或共享任何数据，本政策会在该版本发布前更新，并修改上方的生效日期。</p>
