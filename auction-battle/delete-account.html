@@ -18,7 +18,7 @@
 <body>
 <main>
 <h1>Auction Battle: delete your account</h1>
-<p class="meta">Developer: huanghonsen321-byte · App: Auction Battle (com.huanghonsen.auctionbattle)</p>
+<p class="meta">Developer: Senyue Games · App: Auction Battle (com.huanghonsen.auctionbattle) · Updated: 28 September 2026</p>
 
 <h2>In the app (immediate)</h2>
 <ol>
@@ -27,21 +27,32 @@
 </ol>
 
 <h2>Without the app</h2>
-<p>Open an issue at <a href="https://github.com/huanghonsen321-byte/huanghonsen321-byte.github.io/issues">GitHub Issues</a> titled "Delete Auction Battle account" and give your <b>username</b> (never your password). Because accounts have no e-mail, we will ask you to confirm ownership, for example by changing your nickname in the app to a word we give you. The account is deleted within 7 days of confirmation.</p>
+<p>Open an issue at <a href="https://github.com/huanghonsen321-byte/huanghonsen321-byte.github.io/issues">GitHub Issues</a> titled "Delete Auction Battle account" and give your <b>username</b> (never your password). Issues are public: do not include passwords, sign-in tokens or other private information. Because game accounts have no e-mail address, ownership must be checked before a request can be processed. If you can still access the app, changing your nickname to an agreed value is one possible check. If you cannot access the app, explain that in your request so that an available verification method can be considered. No fixed completion time is promised on this page.</p>
 
 <h2>What is deleted</h2>
 <ul>
-  <li>Username, nickname and creation date.</li>
+  <li>Username, nickname, random player ID and creation date from the live account file.</li>
   <li>The password-derived keys and all sign-in tokens.</li>
   <li>All game statistics (matches, wins, ranks, points, soul use) and ranked points.</li>
-  <li>The friend list, friend requests, block list and reports about the account.</li>
+  <li>The friend list, friend requests and block list, including references in other accounts' social lists.</li>
+  <li>Report entries about the account, subject to the separate retained information below.</li>
 </ul>
-<p>Deletion from the live account file is immediate. The server's dated daily backup copies are kept for 7 days and then overwritten, so the account disappears from them within 7 days. No account data is kept after that. Match data is never stored beyond 10 minutes after a match ends.</p>
+<p>Deletion from the live account file takes effect when the in-app deletion request succeeds. It does not immediately erase all information held elsewhere.</p>
+
+<h2>Information that can remain</h2>
+<ul>
+  <li><b>Backups.</b> When account data changes, the server creates at most one dated backup per day and keeps the seven most recent copies. Old copies are removed as new dated copies are created, not after a fixed number of calendar days. A deleted account can therefore remain in a backup for longer than seven days.</li>
+  <li><b>Reports and penalties.</b> The current version may retain penalty records identifying the deleted account and its random player ID in reports it made about others. Report records are cleared during a later report-data update once the most recent report about the target is over 30 days old. Penalties are cleared during a later update once the latest penalty is over 30 days old and the mute has expired. New reports or the absence of an update can cause older information to remain longer; 30 days is not a fixed maximum.</li>
+  <li><b>Active matches and sessions.</b> A match already in progress continues as a guest. Nicknames and match activity remain until the room closes, at the latest 10 minutes after the match ends. Nickname information in reconnect sessions may remain until the server process restarts.</li>
+  <li><b>Delivered chat.</b> Messages already delivered to other players' devices are not remotely recalled. Their in-app chat history is held only until the app closes.</li>
+</ul>
+<p>See the <a href="privacy-policy.html">privacy policy</a> for the full description of data handling.</p>
 
 <hr>
 
 <h1 lang="zh-CN">拍卖大作战：删除账号</h1>
 <div lang="zh-CN">
+<p class="meta">开发者：森跃游戏 / Senyue Games · 应用：拍卖大作战（com.huanghonsen.auctionbattle）· 更新日期：2026 年 9 月 28 日</p>
 <h2>在应用内（立即生效）</h2>
 <ol>
   <li>在首页点<b>我的账号</b>。</li>
@@ -49,16 +60,26 @@
 </ol>
 
 <h2>无法使用应用时</h2>
-<p>在 <a href="https://github.com/huanghonsen321-byte/huanghonsen321-byte.github.io/issues">GitHub Issues</a> 新建标题为“删除拍卖大作战账号”的问题，写明你的<b>账号名</b>（切勿填写密码）。由于账号没有邮箱，我们会请你确认所有权，例如在应用中把昵称改成我们指定的词。确认后 7 天内删除。</p>
+<p>在 <a href="https://github.com/huanghonsen321-byte/huanghonsen321-byte.github.io/issues">GitHub Issues</a> 新建标题为“删除拍卖大作战账号”的问题，写明你的<b>账号名</b>（切勿填写密码）。问题是公开的，请勿填写密码、登录凭证或其他私密信息。由于游戏账号没有邮箱，处理申请前需要核实账号所有权。如果仍能使用应用，可通过将昵称改成双方约定的内容进行核实；如果无法使用应用，请在申请中说明，以便确认有无可用的核实方式。本页面不承诺固定的处理时限。</p>
 
 <h2>删除的内容</h2>
 <ul>
-  <li>账号名、昵称与注册日期。</li>
+  <li>当前账号文件中的账号名、昵称、随机玩家编号与注册日期。</li>
   <li>由密码推导出的密钥及所有登录凭证。</li>
   <li>全部战绩（对局数、胜场、名次、积分、灵魂使用次数）与段位分。</li>
-  <li>好友列表、好友申请、屏蔽名单以及针对该账号的举报。</li>
+  <li>好友列表、好友申请和屏蔽名单，包括其他账号社交列表中的相关关系。</li>
+  <li>针对该账号的举报条目；其他可能留存的信息见下文。</li>
 </ul>
-<p>当前账号文件中的数据立即删除；服务器每日备份保留 7 天后覆盖，因此 7 天内账号会从备份中消失，之后不保留任何账号数据。对局数据在对局结束 10 分钟后即不再保存。</p>
+<p>应用内删除请求成功后，当前账号文件中的数据即被删除。这不会立即清除其他位置的所有信息。</p>
+
+<h2>可能留存的信息</h2>
+<ul>
+  <li><b>备份。</b>发生账号数据更新时，服务器每天最多创建一份日期备份，并保留最近七份。旧备份随着新日期备份产生而轮换，并非达到固定自然日数后删除。因此，已删除的账号在备份中可能保留超过七天。</li>
+  <li><b>举报与处罚。</b>现有版本可能保留可识别已删除账号的处罚记录，以及该账号举报其他玩家时留下的随机玩家编号。举报记录在该目标最后一次被举报超过 30 天后，于后续举报数据更新时清理；处罚记录在最后一次处罚超过 30 天且禁言结束后，于后续更新时清理。新举报或未触发更新都可能让旧信息保留更久，30 天不是固定的最长保留期。</li>
+  <li><b>进行中的对局与会话。</b>正在进行的对局会以访客身份继续。昵称和对局活动保留至房间关闭，最迟在对局结束 10 分钟后丢弃；重连会话中的昵称等信息可能保留至服务器进程重启。</li>
+  <li><b>已送达的聊天。</b>已经送达其他玩家设备的消息不会被远程撤回；应用内聊天记录只保留至应用关闭。</li>
+</ul>
+<p>完整的数据处理说明请见<a href="privacy-policy.html">隐私政策</a>。</p>
 </div>
 </main>
 </body>

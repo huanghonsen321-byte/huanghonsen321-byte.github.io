@@ -19,10 +19,10 @@
 <body>
 <main>
 <h1>Auction Battle Privacy Policy</h1>
-<p class="meta">App: Auction Battle (package com.huanghonsen.auctionbattle) · Effective date: 28 September 2026</p>
+<p class="meta">Developer: Senyue Games · App: Auction Battle (package com.huanghonsen.auctionbattle) · Effective date: 28 September 2026</p>
 
 <h2>Summary</h2>
-<p>Auction Battle is an online multiplayer game. It uses the data described below only to run matches and, if you create one, your player account. We do not sell or share this data with third parties. Your nickname and match activity are shown to the other players in your room. An account is optional: you can play as a guest.</p>
+<p>Auction Battle is an online multiplayer game. It uses the data described below to run matches, player accounts and social features, and to handle reports. We do not sell this data. It is processed by our game server hosted on Tencent Cloud and provided to other players as described below. An account is optional: you can play as a guest.</p>
 
 <h2>Online matches</h2>
 <p>While you play, the app connects over the internet to our game server (Tencent Cloud). To run a match it sends:</p>
@@ -36,27 +36,31 @@
 <h2>Player account (optional)</h2>
 <p>If you register, our game server stores:</p>
 <ul>
-  <li>your username and nickname, and the date the account was created;</li>
+  <li>your username, nickname, random player ID and the date the account was created;</li>
   <li>values derived from your password (a random salt and two one-way keys). Your password itself never leaves your phone: the app proves you know it without sending it, and the server cannot recover it;</li>
   <li>hashed sign-in tokens for up to 5 devices, each valid for 60 days;</li>
   <li>your game statistics: matches played, wins, top-three finishes, best rank, total points and how often you used each soul.</li>
 </ul>
-<p>This lets you keep your nickname and statistics and continue a match on another phone. Other players see only your nickname. The account file is kept on the game server with dated daily copies for 7 days as a backup. There is no e-mail or phone number on the account, so a forgotten password cannot be recovered.</p>
+<p>This lets you keep your nickname and statistics and continue a match on another phone. Friends, player search and leaderboard features provide other players with your nickname, random player ID, ranked points and selected statistics, including matches played and wins. Friends can also see whether you are online or in a match. Your username, password-derived data and sign-in tokens are not included in these public profiles.</p>
+<p>The account file is kept on the game server. When account data changes, the server creates at most one dated backup per day and keeps the seven most recent backups. Rotation is based on the number of backups, not a seven-calendar-day deadline. Older backups may remain longer if no new backups are created. Accounts do not contain an e-mail address or phone number, so a forgotten password cannot be recovered.</p>
 
 <h2>Chat, friends, reports and the leaderboard</h2>
 <ul>
-  <li><b>Chat.</b> Room chat and messages to friends are passed by the server to the players they are for and are <b>not stored</b> on the server. Your phone keeps them only until the app closes. Offensive words, links and phone numbers are masked automatically. You can turn room chat off in Settings.</li>
+  <li><b>Chat.</b> Room chat and messages to friends are passed by the server to the players they are for and are <b>not stored</b> on the server, except for reported excerpts described below. Your phone keeps chat history only until the app closes. Offensive words, links and phone numbers are masked automatically. You can turn room chat off in Settings.</li>
   <li><b>Friends</b> (accounts only). Your friend list, waiting friend requests and the players you blocked are stored with your account. Friends see your nickname, tier and whether you are online or in a game.</li>
   <li><b>Blocking.</b> A blocked player's messages, invitations and friend requests no longer reach you. Guests' block lists are kept only on the phone.</li>
-  <li><b>Reports.</b> When you report a player, the server stores which player was reported (their account, or a temporary guest id), a random id of the reporter, the reason and at most 60 characters of the reported message, for up to 30 days. After several different players report the same player, that player's chat is paused for a while and a reported nickname is replaced by a plain one. Reports are only used for this.</li>
+  <li><b>Reports.</b> When you report a player, the server stores the reported account or temporary guest ID, the reporter's random player ID, the reason, and message excerpts of up to 60 characters each. It keeps up to five recent excerpts for each reported player, along with mute counts and expiry times. After several different players report the same player, that player's chat may be paused and a reported nickname may be replaced by a plain one. This information is used only to handle reports and limit abuse.</li>
   <li><b>Ranked points and the leaderboard.</b> Quick matches played while signed in add or remove ranked points, stored with your account's statistics. The leaderboard shows the nickname, tier and points of the top 100 players to everyone.</li>
 </ul>
+
+<p>When report data is updated, the server removes report records whose most recent report is over 30 days old. Further reports or the absence of a later data update can cause older information to remain longer, so 30 days is not a fixed maximum retention period. Penalty records are removed during a later report-data update once the latest penalty is over 30 days old and the mute has expired.</p>
 
 <h2>Community rules</h2>
 <p>Nicknames and chat must not contain insults, harassment, hate, sexual content, advertising or spam, other people's personal information, or pretend to be the game's staff. Nicknames that break these rules are refused; players reported by several others are muted and renamed as described above, and repeated breaches lead to longer mutes. Use Report and Block on any chat line or player.</p>
 
 <h2>Deleting your account</h2>
-<p>In the app, open <b>My account → Delete account</b> and confirm with your password. The account, its statistics, friends, block list, ranked points, reports about it and its sign-in tokens are removed from the server immediately; the daily backup copies that still contain it are overwritten within 7 days. If you can no longer open the app, see <a href="delete-account.html">how to request deletion</a>.</p>
+<p>In the app, open <b>My account → Delete account</b>, enter your password and confirm. Your account details, password-derived data, sign-in tokens, statistics, ranked points and social lists are removed from the live account file. References in other accounts' friend, request and block lists are also removed. Report entries about the account are removed, but the current version may retain penalty records identifying the account and the random player ID left by reports you made about others. These follow the report-data cleanup rules described above.</p>
+<p>Deletion does not immediately erase existing backups. Backups rotate as the seven most recent copies and are not guaranteed to disappear within seven days. A match already in progress continues as a guest. Nicknames and match activity remain in the room until it closes, and nickname information in reconnect sessions may remain until the server process restarts. Chat messages already delivered to other players' devices are not remotely recalled. If you can no longer open the app, see <a href="delete-account.html">how to request deletion</a>.</p>
 
 <h2>What the app does not do</h2>
 <ul>
@@ -81,10 +85,10 @@
 <hr>
 
 <h1 lang="zh-CN">拍卖大作战 隐私政策</h1>
-<p class="meta" lang="zh-CN">应用：拍卖大作战（包名 com.huanghonsen.auctionbattle）· 生效日期：2026 年 9 月 28 日</p>
+<p class="meta" lang="zh-CN">开发者：森跃游戏 / Senyue Games · 应用：拍卖大作战（包名 com.huanghonsen.auctionbattle）· 生效日期：2026 年 9 月 28 日</p>
 <div lang="zh-CN">
 <h2>摘要</h2>
-<p>拍卖大作战是联机多人游戏，只把下述数据用于进行对局，以及（如果你注册）你的玩家账号。我们不出售、也不向第三方共享这些数据。同一房间的其他玩家会看到你的昵称及对局信息。账号是可选的，你可以用访客身份游玩。</p>
+<p>拍卖大作战是联机多人游戏，把下述数据用于进行对局、玩家账号、社交功能和处理举报。我们不出售这些数据。数据由托管在腾讯云上的游戏服务器处理，并按下文说明提供给其他玩家。账号是可选的，你可以用访客身份游玩。</p>
 
 <h2>联机对局</h2>
 <p>游玩时，应用会通过互联网连接我们的游戏服务器（腾讯云）。为进行对局，会发送：</p>
@@ -98,27 +102,31 @@
 <h2>玩家账号（可选）</h2>
 <p>注册后，游戏服务器会保存：</p>
 <ul>
-  <li>你的账号名、昵称和注册日期；</li>
+  <li>你的账号名、昵称、随机玩家编号和注册日期；</li>
   <li>由密码推导出的数值（随机盐值和两个单向密钥）。密码本身从不离开你的手机：应用在不发送密码的情况下证明你知道它，服务器也无法还原密码；</li>
   <li>最多 5 台设备的登录凭证（只保存哈希值），各自 60 天有效；</li>
   <li>你的战绩：对局数、胜场、前三名次数、最佳名次、累计积分，以及各灵魂的使用次数。</li>
 </ul>
-<p>这让你保留昵称与战绩，并能换一台手机继续对局。其他玩家只能看到你的昵称。账号文件保存在游戏服务器上，另有每日一份、保留 7 天的备份。账号不含邮箱或手机号，因此忘记密码无法找回。</p>
+<p>这让你保留昵称与战绩，并能换一台手机继续对局。好友、玩家搜索和排行榜功能会向其他玩家提供你的昵称、随机玩家编号、段位分和部分战绩，包括对局数与胜场。好友还可看到你的在线或对局状态。账号名、密码派生数据和登录凭证不会随这些公开资料展示。</p>
+<p>账号文件保存在游戏服务器上。发生账号数据更新时，服务器每天最多创建一份日期备份，并保留最近七份备份。备份按份数轮换，并非按七个自然日自动删除；如果没有产生新的备份，旧备份可能保留更久。账号不含邮箱或手机号，因此忘记密码无法找回。</p>
 
 <h2>聊天、好友、举报与排行榜</h2>
 <ul>
-  <li><b>聊天。</b>房间聊天和好友私聊由服务器转发给对应玩家，<b>服务器不保存</b>；手机上的记录在关闭应用后即消失。不当词语、链接和电话号码会被自动遮挡。可在设置中关闭房间聊天。</li>
+  <li><b>聊天。</b>房间聊天和好友私聊由服务器转发给对应玩家，<b>服务器不保存</b>，但下文说明的被举报消息摘录除外。手机上的聊天记录在关闭应用后即消失。不当词语、链接和电话号码会被自动遮挡。可在设置中关闭房间聊天。</li>
   <li><b>好友</b>（仅限账号）。好友列表、待处理的好友申请和你屏蔽的玩家随账号保存。好友可以看到你的昵称、段位以及是否在线或正在对局。</li>
   <li><b>屏蔽。</b>被屏蔽的玩家的消息、邀请和好友申请不会再送达你。访客的屏蔽名单只保存在手机上。</li>
-  <li><b>举报。</b>举报玩家时，服务器会保存被举报的玩家（其账号，或临时的访客编号）、举报人的随机编号、举报原因以及最多 60 个字的被举报消息，最长 30 天。同一玩家被多位不同玩家举报后，会被暂停发言一段时间，被举报的昵称会改为普通名字。举报只用于此目的。</li>
+  <li><b>举报。</b>举报玩家时，服务器保存被举报账号或临时访客编号、举报人的随机玩家编号、举报原因，以及每条最多 60 个字符的消息摘录。每位被举报玩家最多保留最近五条摘录，禁言次数和截止时间也会保存。同一玩家被多位不同玩家举报后，可能被暂停发言，被举报的昵称可能改为普通名字。这些信息只用于处理举报和限制滥用。</li>
   <li><b>段位与排行榜。</b>登录后进行的快速匹配会增减段位分，随账号战绩保存。排行榜向所有玩家显示前 100 名的昵称、段位和分数。</li>
 </ul>
+
+<p>服务器在更新举报数据时清理距最后一次举报已超过 30 天的记录；仍有新举报或尚未触发数据更新时，旧记录可能保留更久，因此 30 天不是固定的最长保留期。处罚记录在距最后一次处罚超过 30 天且禁言结束后，于后续举报数据更新时清理。</p>
 
 <h2>社区规则</h2>
 <p>昵称和聊天不得包含辱骂、骚扰、仇恨、色情、广告或刷屏、他人的个人信息，也不得冒充游戏官方人员。违反规则的昵称无法使用；被多位玩家举报的玩家会按上述方式被禁言并改名，屡次违规禁言时间更长。每条聊天和每位玩家都可以举报和屏蔽。</p>
 
 <h2>删除账号</h2>
-<p>在应用中打开<b>我的账号 → 删除账号</b>并输入密码确认。账号、战绩、好友、屏蔽名单、段位分、针对该账号的举报与登录凭证会立即从服务器删除；仍包含它的每日备份会在 7 天内被覆盖。如果已无法打开应用，请见<a href="delete-account.html">申请删除账号</a>。</p>
+<p>在应用中打开<b>我的账号 → 删除账号</b>，输入密码并确认。当前账号文件中的账号资料、密码派生数据、登录凭证、战绩、段位分和社交列表会被删除；其他账号中的相关好友、好友申请和屏蔽关系也会移除。针对该账号的举报条目会被移除，但现有版本可能保留可识别该账号的处罚记录，以及该账号曾作为举报人留下的随机玩家编号；它们按上述举报数据清理规则处理。</p>
+<p>删除不会立即清除已有备份，备份按最近七份轮换，不保证在七天内消失。正在进行的对局会以访客身份继续；房间中的昵称和对局活动会保留至房间关闭，重连会话中的昵称等信息可能保留至服务器进程重启。其他玩家设备上已经收到的聊天记录不会被远程撤回。如果已无法打开应用，请见<a href="delete-account.html">申请删除账号</a>。</p>
 
 <h2>本应用不会做的事</h2>
 <ul>
