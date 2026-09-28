@@ -29,7 +29,8 @@
 <ul>
   <li>your nickname (a random name by default; do not use your real name);</li>
   <li>a random reconnect code issued by our game server and saved on your device, so you can return to your seat after a dropped connection. It is not linked to your Google account or any device identifier;</li>
-  <li>your in-game actions (soul choice, bids, wagers, ready taps).</li>
+  <li>your in-game actions (soul choice, bids, wagers, ready taps);</li>
+  <li>the game's language setting (Chinese or English), used only to give the empty seats in your room fitting names.</li>
 </ul>
 <p>Like any internet connection, the server necessarily sees your IP address while you are connected. It uses the address only in memory, to slow down repeated wrong passwords, and does not store it. The game server does not write IP addresses, nicknames, usernames or codes to its logs; its logs contain only room codes, times and aggregate counts, and rotated game logs older than 14 days are cleaned up when the server runner starts a game-server process. Match state is held in memory only while the room is open and is discarded at the latest 10 minutes after the match ends. The cloud provider may keep standard network records under its own policies.</p>
 
@@ -50,7 +51,7 @@
   <li><b>Friends</b> (accounts only). Your friend list, waiting friend requests and the players you blocked are stored with your account. Friends see your nickname, tier and whether you are online or in a game.</li>
   <li><b>Blocking.</b> A blocked player's messages, invitations and friend requests no longer reach you. Guests' block lists are kept only on the phone.</li>
   <li><b>Reports.</b> When you report a player, the server stores the reported account or temporary guest ID, the reporter's random player ID, the reason, and message excerpts of up to 60 characters each. It keeps up to five recent excerpts for each reported player, along with mute counts and expiry times. After several different players report the same player, that player's chat may be paused and a reported nickname may be replaced by a plain one. This information is used only to handle reports and limit abuse.</li>
-  <li><b>Ranked points and the leaderboard.</b> Quick matches played while signed in add or remove ranked points, stored with your account's statistics. The leaderboard shows the nickname, tier and points of the top 100 players to everyone.</li>
+  <li><b>Ranked points and the leaderboard.</b> Quick matches played while signed in add or remove ranked points, stored with your account's statistics. Seasons last two months; your tier in past seasons is kept with the account. The leaderboard shows the nickname, tier and points of the top 100 players to everyone.</li>
 </ul>
 
 <p>When report data is updated, the server removes report records whose most recent report is over 30 days old. Further reports or the absence of a later data update can cause older information to remain longer, so 30 days is not a fixed maximum retention period. Penalty records are removed during a later report-data update once the latest penalty is over 30 days old and the mute has expired.</p>
@@ -95,7 +96,8 @@
 <ul>
   <li>你的昵称（默认是随机名字，请勿使用真实姓名）；</li>
   <li>服务器随机生成并保存在你设备上的重连码，用于断线后回到原座位；它不关联你的 Google 账号或任何设备标识；</li>
-  <li>你在游戏中的操作（选择灵魂、出价、下注、准备）。</li>
+  <li>你在游戏中的操作（选择灵魂、出价、下注、准备）；</li>
+  <li>游戏的语言设置（中文或英文），只用于给房间里的空位取合适的名字。</li>
 </ul>
 <p>与所有网络连接一样，连接期间服务器必然会看到你的 IP 地址；服务器只在内存中用它限制反复输错密码，不会保存。游戏服务器不会把 IP 地址、昵称、账号名或任何代码写入日志；日志只包含房间号、时间和汇总统计，服务器运行脚本在启动游戏服务进程时清理超过 14 天的轮换日志。对局状态只在房间开放期间保存在内存中，最迟在对局结束 10 分钟后丢弃。云服务商可能依其自身政策保留标准的网络记录。</p>
 
@@ -116,7 +118,7 @@
   <li><b>好友</b>（仅限账号）。好友列表、待处理的好友申请和你屏蔽的玩家随账号保存。好友可以看到你的昵称、段位以及是否在线或正在对局。</li>
   <li><b>屏蔽。</b>被屏蔽的玩家的消息、邀请和好友申请不会再送达你。访客的屏蔽名单只保存在手机上。</li>
   <li><b>举报。</b>举报玩家时，服务器保存被举报账号或临时访客编号、举报人的随机玩家编号、举报原因，以及每条最多 60 个字符的消息摘录。每位被举报玩家最多保留最近五条摘录，禁言次数和截止时间也会保存。同一玩家被多位不同玩家举报后，可能被暂停发言，被举报的昵称可能改为普通名字。这些信息只用于处理举报和限制滥用。</li>
-  <li><b>段位与排行榜。</b>登录后进行的快速匹配会增减段位分，随账号战绩保存。排行榜向所有玩家显示前 100 名的昵称、段位和分数。</li>
+  <li><b>段位与排行榜。</b>登录后进行的快速匹配会增减段位分，随账号战绩保存。每个赛季两个月，往季段位随账号保留。排行榜向所有玩家显示前 100 名的昵称、段位和分数。</li>
 </ul>
 
 <p>服务器在更新举报数据时清理距最后一次举报已超过 30 天的记录；仍有新举报或尚未触发数据更新时，旧记录可能保留更久，因此 30 天不是固定的最长保留期。处罚记录在距最后一次处罚超过 30 天且禁言结束后，于后续举报数据更新时清理。</p>
